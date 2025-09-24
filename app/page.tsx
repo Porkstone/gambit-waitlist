@@ -31,16 +31,24 @@ export default function Home() {
 
             <div className="flex items-center gap-8 pt-4">
               <div className="opacity-70 hover:opacity-100 transition-opacity">
-                <span className="text-white font-bold text-lg tracking-wider">NETFLIX</span>
+              <span className="bg-neutral-100 rounded-md px-4 py-2 mr-2 inline-block">
+                <img src="/images/netflix.png" alt="Netflix Logo" className="h-8 md:h-10 inline-block mr-1" />
+                </span>
               </div>
               <div className="opacity-70 hover:opacity-100 transition-opacity">
-                <span className="text-white font-bold text-lg tracking-wider">AIRBNB</span>
+              <span className="bg-neutral-100 rounded-md px-4 py-2 mr-2 inline-block">
+                <img src="/images/airbnb.png" alt="Airbnb Logo" className="h-8 md:h-10 inline-block mr-1" />
+                </span>
               </div>
               <div className="opacity-70 hover:opacity-100 transition-opacity">
-                <span className="text-white font-bold text-lg tracking-wider">UBER</span>
+                <span className="bg-neutral-100 rounded-md px-4 py-2 mr-2 inline-block">
+                  <img src="/images/uber.jpg" alt="Uber Logo" className="h-8 md:h-10 inline-block mr-1" />
+                  </span>
               </div>
-              <div className="opacity-70 hover:opacity-100 transition-opacity">
-                <span className="text-white font-bold text-lg tracking-wider">VISA</span>
+              <div className="opacity-70 hover:opacity-100 transition-opacity"> 
+                <span className="bg-neutral-100 rounded-md px-4 py-2 mr-1 inline-block">
+                  <img src="/images/visa.webp" alt="Visa Logo" className="h-8 md:h-10 inline-block" />
+                </span>
               </div>
             </div>
           </div>
