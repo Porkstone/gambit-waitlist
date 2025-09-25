@@ -15,6 +15,19 @@ export function WaitlistForm() {
     if (email) {
       setIsSubmitted(true)
       // Here you would typically send the email to your backend
+      fetch("https://hallowed-mongoose-597.convex.site/api/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          mailingListName: "gambit-waitlist",
+          email
+        })
+      }).catch((err) => {
+        // Optionally handle error, but don't block UI
+        console.error("Failed to subscribe:", err)
+      })
       console.log("Email submitted:", email)
     }
   }
