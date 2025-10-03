@@ -21,7 +21,7 @@ export function WaitlistForm() {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          mailingListName: "gambit-waitlist",
+          mailingListName: "gambit",
           email
         })
       }).catch((err) => {
@@ -57,7 +57,7 @@ export function WaitlistForm() {
         type="submit"
         className="bg-primary hover:bg-primary/90 text-primary-foreground h-12 px-8 font-bold text-sm tracking-wide whitespace-nowrap"
       >
-        GET EARLY ACCESS
+        CLAIM FREE INVITE
       </Button>
     </form>
   )

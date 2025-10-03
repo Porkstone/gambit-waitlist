@@ -2,69 +2,86 @@ import { GambitLogo } from "@/components/gambit-logo"
 import { ParticleBackground } from "@/components/particle-background"
 import { WaitlistForm } from "@/components/waitlist-form"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function Home() {
   return (
-    <div className="h-screen gradient-bg relative overflow-hidden">
-      <ParticleBackground />
+    <div className="h-screen flex flex-col">
+      <header className="bg-white py-4 px-6 lg:px-12 flex items-center gap-8 relative z-20 shadow-sm">
+        <GambitLogo />
+        <Image
+          src="/images/ai-award-badge.png"
+          alt="The Future of AI 2025 Top 50"
+          width={400}
+          height={100}
+          className="w-auto h-16 lg:h-20"
+        />
+      </header>
 
-      {/* Main Content - Full Height Grid */}
-      <main className="relative z-10 grid lg:grid-cols-2 h-full">
-        {/* Left Content */}
-        <div className="flex flex-col justify-center px-6 lg:px-12 relative">
-          <div className="absolute top-6 left-6 lg:left-12">
-            <GambitLogo />
-          </div>
+      <div className="flex-1 gradient-bg relative overflow-hidden flex flex-col">
+        <ParticleBackground />
 
-          <div className="space-y-8 max-w-lg">
-            <h1 className="text-xl lg:text-2xl xl:text-3xl font-bold text-foreground leading-tight text-balance">
-              <span className="text-white">{"WE'RE LAUNCHING AN INNOVATIVE CONCEPT TO SAVE PEOPLE UP TO "}</span>
-              <span className="text-yellow-400">$150 OFF HOTEL BOOKINGS WORLDWIDE </span>
-              <span className="text-white">WITH THIS NEW TRAVEL HACK</span>
-            </h1>
+        {/* Main Content - Full Height Grid */}
+        <main className="relative z-10 grid lg:grid-cols-2 flex-1">
+          {/* Left Content */}
+          <div className="flex flex-col justify-center px-6 lg:px-12 relative">
+            <div className="space-y-8 max-w-lg">
+              <h1 className="text-lg lg:text-xl xl:text-2xl font-bold text-foreground leading-tight text-balance">
+                <span className="text-white">{"WE'RE LAUNCHING AN INNOVATIVE CONCEPT TO SAVE PEOPLE UP TO "}</span>
+                <span className="text-yellow-400 whitespace-nowrap">$150 OFF EACH HOTEL BOOKING</span>
+                <br />
+                <span className="text-white whitespace-nowrap">WITH THIS NEW TRAVEL HACK</span>
+              </h1>
 
-            <p className="text-sm lg:text-base text-white font-medium tracking-wide whitespace-nowrap">
-              COMING SOON. ACCESS IS LIMITED. BE AMONG THE FIRST.
-            </p>
+              <p className="text-sm lg:text-base text-white font-medium tracking-wide whitespace-nowrap">
+                COMING SOON. BE AMONG THE FIRST.
+              </p>
 
-            <WaitlistForm />
+              <WaitlistForm />
 
-            <div className="flex items-center gap-8 pt-4">
-              <div className="opacity-70 hover:opacity-100 transition-opacity">
-              <span className="bg-neutral-100 rounded-md px-4 py-2 mr-2 inline-block">
-                <img src="/images/netflix.png" alt="Netflix Logo" className="h-8 md:h-10 inline-block mr-1" />
-                </span>
-              </div>
-              <div className="opacity-70 hover:opacity-100 transition-opacity">
-              <span className="bg-neutral-100 rounded-md px-4 py-2 mr-2 inline-block">
-                <img src="/images/airbnb.png" alt="Airbnb Logo" className="h-8 md:h-10 inline-block mr-1" />
-                </span>
-              </div>
-              <div className="opacity-70 hover:opacity-100 transition-opacity">
-                <span className="bg-neutral-100 rounded-md px-4 py-2 mr-2 inline-block">
-                  <img src="/images/uber.jpg" alt="Uber Logo" className="h-8 md:h-10 inline-block mr-1" />
-                  </span>
-              </div>
-              <div className="opacity-70 hover:opacity-100 transition-opacity"> 
-                <span className="bg-neutral-100 rounded-md px-4 py-2 mr-1 inline-block">
-                  <img src="/images/visa.webp" alt="Visa Logo" className="h-8 md:h-10 inline-block" />
-                </span>
+              <div className="flex items-center gap-8 pt-4">
+                <div className="opacity-70 hover:opacity-100 transition-opacity">
+                  <span className="text-white font-bold text-lg tracking-wider">NETFLIX</span>
+                </div>
+                <div className="opacity-70 hover:opacity-100 transition-opacity">
+                  <span className="text-white font-bold text-lg tracking-wider">AIRBNB</span>
+                </div>
+                <div className="opacity-70 hover:opacity-100 transition-opacity">
+                  <span className="text-white font-bold text-lg tracking-wider">UBER</span>
+                </div>
+                <div className="opacity-70 hover:opacity-100 transition-opacity">
+                  <span className="text-white font-bold text-lg tracking-wider">VISA</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        {/* Right Hero Image - Full Height */}
-        <div className="relative h-full">
-          <Image
-            src="/images/hero-woman-city.png"
-            alt="Woman in city with golden particles"
-            fill
-            className="object-cover object-center"
-            priority
-          />
-        </div>
-      </main>
+          {/* Right Hero Image - Full Height */}
+          <div className="relative h-full">
+            <Image
+              src="/images/hero-woman-city.png"
+              alt="Woman in city with golden particles"
+              fill
+              className="object-cover object-center"
+              priority
+            />
+          </div>
+        </main>
+
+        <footer className="relative z-10 bg-black/20 backdrop-blur-sm border-t border-white/10 py-4 px-6">
+          <p className="text-center text-white/70 text-xs lg:text-sm">
+            By using Gambit Technologies Ltd, you agree to our{" "}
+            <Link href="/terms" className="underline hover:text-white transition-colors">
+              Terms
+            </Link>{" "}
+            and have read our{" "}
+            <Link href="/privacy" className="underline hover:text-white transition-colors">
+              Privacy Policy
+            </Link>
+            .
+          </p>
+        </footer>
+      </div>
     </div>
   )
 }
