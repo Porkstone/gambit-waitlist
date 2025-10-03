@@ -21,7 +21,7 @@ export function WaitlistForm() {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          mailingListName: "gambit",
+          mailingListName: "gambit-waitlist",
           email
         })
       }).catch((err) => {
