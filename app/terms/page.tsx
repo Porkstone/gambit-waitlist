@@ -10,17 +10,26 @@ export const metadata = {
 export default function TermsPage() {
   return (
     <div className="h-screen flex flex-col">
-      <header className="bg-white py-4 px-6 lg:px-12 relative z-20 shadow-sm">
-        <div className="flex items-center">
-          <GambitLogo />
-        </div>
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+      <header className="bg-white py-5 lg:py-7 px-4 lg:px-12 relative z-20 shadow-sm min-h-16 lg:min-h-24">
+        <div className="flex items-center justify-between lg:justify-start">
+          <Link href="/" aria-label="Go to home">
+            <GambitLogo />
+          </Link>
           <Image
             src="/images/ai-award-badge.png"
             alt="The Future of AI 2025 Top 50"
             width={400}
             height={100}
-            className="h-8 lg:h-10 w-auto"
+            className="h-6 w-auto lg:hidden"
+          />
+        </div>
+        <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+          <Image
+            src="/images/ai-award-badge.png"
+            alt="The Future of AI 2025 Top 50"
+            width={400}
+            height={100}
+            className="h-10 w-auto"
           />
         </div>
       </header>
