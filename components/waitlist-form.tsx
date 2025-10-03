@@ -51,7 +51,7 @@ export function WaitlistForm() {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required
-        className="flex-1 bg-white text-gray-900 placeholder:text-gray-500 border-0 h-12 text-sm font-medium tracking-wide"
+        className="flex-1 bg-white text-gray-900 placeholder:text-gray-500 border-0 h-12 text-sm font-medium tracking-wide text-center sm:text-left placeholder:text-center sm:placeholder:text-left"
       />
       <Button
         type="submit"

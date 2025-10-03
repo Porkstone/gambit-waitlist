@@ -52,16 +52,37 @@ export default function Home() {
 
               <div className="flex items-center gap-8 pt-4">
                 <div className="opacity-70 hover:opacity-100 transition-opacity">
-                  <span className="text-white font-bold text-lg tracking-wider">NETFLIX</span>
+                  <Image
+                    src="/images/logos/netflix-logo.png"
+                    alt="Netflix Logo"
+                    width={80}
+                    height={24}
+                    className=""
+                  />
                 </div>
                 <div className="opacity-70 hover:opacity-100 transition-opacity">
-                  <span className="text-white font-bold text-lg tracking-wider">AIRBNB</span>
+                  <Image
+                    src="/images/logos/airbnb-logo.png"
+                    alt="Airbnb Logo"
+                    width={80}
+                    height={24}
+                  />
                 </div>
                 <div className="opacity-70 hover:opacity-100 transition-opacity">
-                  <span className="text-white font-bold text-lg tracking-wider">UBER</span>
+                  <Image
+                    src="/images/logos/uber-logo.png"
+                    alt="Uber Logo"
+                    width={80}
+                    height={24}
+                  />
                 </div>
                 <div className="opacity-70 hover:opacity-100 transition-opacity">
-                  <span className="text-white font-bold text-lg tracking-wider">VISA</span>
+                  <Image
+                    src="/images/logos/visa-logo.png"
+                    alt="Visa Logo"
+                    width={80}
+                    height={24}
+                  />
                 </div>
               </div>
             </div>
