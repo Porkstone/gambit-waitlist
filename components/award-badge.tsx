@@ -34,9 +34,9 @@ export function AwardBadge() {
         </div>
   
         <svg
-          width="32"
-          height="48"
-          viewBox="0 0 32 48"
+          width="64"
+          height="96"
+          viewBox="0 0 64 96"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           className="text-gray-700"

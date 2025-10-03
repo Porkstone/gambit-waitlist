@@ -7,15 +7,19 @@ import Link from "next/link"
 export default function Home() {
   return (
     <div className="h-screen flex flex-col">
-      <header className="bg-white py-4 px-6 lg:px-12 flex items-center gap-8 relative z-20 shadow-sm">
-        <GambitLogo />
-        <Image
-          src="/images/ai-award-badge.png"
-          alt="The Future of AI 2025 Top 50"
-          width={400}
-          height={100}
-          className="w-auto h-16 lg:h-20"
-        />
+      <header className="bg-white py-4 px-6 lg:px-12 relative shadow-sm">
+        <div className="flex items-center">
+          <GambitLogo />
+        </div>
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+          <Image
+            src="/images/ai-award-badge.png"
+            alt="The Future of AI 2025 Top 50"
+            width={400}
+            height={100}
+            className="h-8 lg:h-10 w-auto"
+          />
+        </div>
       </header>
 
       <div className="flex-1 gradient-bg relative overflow-hidden flex flex-col">
