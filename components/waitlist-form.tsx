@@ -51,11 +51,12 @@ export function WaitlistForm() {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required
-        className="flex-1 bg-white text-gray-900 placeholder:text-gray-500 border-0 h-12 text-sm font-medium tracking-wide text-center sm:text-left placeholder:text-center sm:placeholder:text-left"
+        className="flex-1 bg-white text-gray-900 placeholder:text-gray-500 border-0 !h-12 !min-h-12 text-sm font-medium tracking-wide text-center sm:text-left placeholder:text-center sm:placeholder:text-left"
       />
       <Button
         type="submit"
-        className="bg-primary hover:bg-primary/90 text-primary-foreground h-12 px-8 font-bold text-sm tracking-wide whitespace-nowrap"
+        size={undefined}
+        className="bg-primary hover:bg-primary/90 text-primary-foreground !h-12 px-8 font-bold text-sm tracking-wide whitespace-nowrap"
       >
         CLAIM FREE INVITE
       </Button>
