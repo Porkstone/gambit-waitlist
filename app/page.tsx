@@ -37,16 +37,23 @@ export default function Home() {
           {/* Left Content */}
           <div className="flex flex-col justify-center px-6 lg:px-12 relative">
             <div className="space-y-8 max-w-lg">
-              <h1 className="text-lg lg:text-xl xl:text-2xl font-bold text-foreground leading-tight text-balance">
-                <span className="text-white">{"WE'RE LAUNCHING AN INNOVATIVE CONCEPT TO SAVE PEOPLE UP TO "}</span>
-                <span className="text-yellow-400 whitespace-nowrap">$150 OFF EACH HOTEL BOOKING</span>
-                <br />
-                <span className="text-white whitespace-nowrap">WITH THIS NEW TRAVEL HACK</span>
-              </h1>
+            <h1 className="text-lg lg:text-xl xl:text-2xl font-bold text-foreground text-balance leading-relaxed lg:leading-loose">
+                
+                <span className="text-white">
+                  THE TOOL THAT <span className="underline">ACTUALLY</span> GETS YOU 
+                </span>
+              
+              
+                <span className="text-white"> UP TO</span>
+                <span className="text-yellow-400"> $150 OFF EACH HOTEL BOOKING </span>
+              
+              <br />
+              <span className="text-white whitespace-nowrap">WITH THIS NEW TRAVEL HACK</span>
+            </h1>
 
-              <p className="text-sm lg:text-base text-white font-medium tracking-wide whitespace-nowrap">
-                COMING SOON. BE AMONG THE FIRST.
-              </p>
+            <p className="text-sm lg:text-base text-white font-medium tracking-wide whitespace-nowrap">
+              COMING SOON.
+            </p>
 
               <WaitlistForm />
 
