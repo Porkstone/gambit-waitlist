@@ -7,18 +7,11 @@ import { AspectRatio } from "./ui/aspect-ratio"
 export function HeroMedia() {
   const videoRef = useRef<HTMLVideoElement | null>(null)
   const [showVideo, setShowVideo] = useState(false)
-  const [timeElapsed, setTimeElapsed] = useState(false)
-  const [canPlay, setCanPlay] = useState(false)
 
   useEffect(() => {
-    const id = window.setTimeout(() => setTimeElapsed(true), 3000)
+    const id = window.setTimeout(() => setShowVideo(true), 3000)
     return () => clearTimeout(id)
   }, [])
-
-  useEffect(() => {
-    if (timeElapsed && canPlay)
-      setShowVideo(true)
-  }, [timeElapsed, canPlay])
 
   return (
     <div className="relative h-full pl-4 pr-8 lg:pl-8 lg:pr-16 py-4 lg:py-8">
@@ -46,10 +39,7 @@ export function HeroMedia() {
               autoPlay
               playsInline
               preload="auto"
-              onCanPlay={() => {
-                setCanPlay(true)
-                videoRef.current?.play().catch(() => {})
-              }}
+              onCanPlay={() => videoRef.current?.play().catch(() => {})}
             />
           </AspectRatio>
         </div>
