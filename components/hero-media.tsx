@@ -20,8 +20,8 @@ export function HeroMedia() {
         aria-hidden={!showVideo}
       >
         <div className="text-center px-3">
-          <div className="text-primary text-2xl lg:text-3xl font-semibold tracking-wide pt-4">How it works</div>
-          <div className="text-primary text-[20px] lg:text-2xl">(example on Booking.com)</div>
+          <div className="text-primary text-3xl lg:text-4xl font-semibold tracking-wide pt-4">How it works</div>
+          <div className="text-primary text-base lg:text-lg">(example on Booking.com)</div>
         </div>
       </div>
       <div className="relative z-10 mt-24 lg:mt-32 flex">
@@ -54,5 +54,3 @@ export function HeroMedia() {
     </div>
   )
 }
-
-
