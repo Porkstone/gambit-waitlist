@@ -14,7 +14,7 @@ export function HeroMedia() {
   }, [])
 
   return (
-    <div className="relative h-full pl-4 pr-8 lg:pl-8 lg:pr-16 py-4 lg:py-8">
+    <div className="relative h-full px-4 lg:pl-8 lg:pr-16 py-4 lg:py-8">
       <div
         className={`pointer-events-none absolute top-10 lg:top-14 left-0 right-0 z-20 flex justify-center transition-opacity duration-700 ${showVideo ? "opacity-100" : "opacity-0"}`}
         aria-hidden={!showVideo}
@@ -24,7 +24,7 @@ export function HeroMedia() {
           <div className="text-primary text-base lg:text-lg">(example on Booking.com)</div>
         </div>
       </div>
-      <div className="relative z-10 mt-24 lg:mt-32 flex">
+      <div className="relative z-10 mt-28 lg:mt-32 flex">
         <div
           className={`relative ml-0 w-full max-w-[1100px] rounded-2xl ring-1 ring-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.45)] bg-black/60 overflow-hidden transition-opacity duration-700 ${showVideo ? "opacity-100" : "opacity-0"}`}
           aria-hidden={!showVideo}
@@ -33,7 +33,7 @@ export function HeroMedia() {
             <video
               ref={videoRef}
               src="/images/u.mp4"
-              className={`h-full w-full object-contain object-left transition-opacity duration-700 ${showVideo ? "opacity-100" : "opacity-0"}`}
+              className={`h-full w-full object-contain object-center lg:object-left transition-opacity duration-700 ${showVideo ? "opacity-100" : "opacity-0"}`}
               muted
               loop
               autoPlay
