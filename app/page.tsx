@@ -3,6 +3,7 @@ import { ParticleBackground } from "@/components/particle-background"
 import { WaitlistForm } from "@/components/waitlist-form"
 import Image from "next/image"
 import Link from "next/link"
+import { HeroMedia } from "../components/hero-media"
 
 export default function Home() {
   return (
@@ -95,16 +96,8 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right Hero Image - Full Height */}
-          <div className="relative h-full">
-            <Image
-              src="/images/hero-woman-city.png"
-              alt="Woman in city with golden particles"
-              fill
-              className="object-cover object-center"
-              priority
-            />
-          </div>
+          {/* Right Hero Media - Video crossfades from Image on load */}
+          <HeroMedia />
         </main>
 
         <footer className="relative z-10 bg-black/20 backdrop-blur-sm border-t border-white/10 py-4 px-6">
