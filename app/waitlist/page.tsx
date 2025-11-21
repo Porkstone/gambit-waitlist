@@ -5,7 +5,7 @@ import { ParticleBackground } from "@/components/particle-background"
 import { WaitlistForm } from "@/components/waitlist-form"
 import Image from "next/image"
 import Link from "next/link"
-import { HeroMedia } from "../components/hero-media"
+import { HeroMedia } from "@/components/hero-media"
 
 export default function WaitlistPage() {
   return (
@@ -128,4 +128,3 @@ export default function WaitlistPage() {
     </div>
   )
 }
-
