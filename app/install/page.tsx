@@ -98,7 +98,16 @@ export default function InstallPage() {
       </main>
 
       {/* How It Works Section */}
-      <section className="relative z-10 max-w-[1400px] mx-auto w-full px-6 lg:px-8 py-16 lg:py-24 text-center">
+      <section className="relative z-10 max-w-[1400px] mx-auto w-full px-6 lg:px-8 pt-8 lg:pt-12 pb-16 lg:pb-24 text-center">
+        <div className="flex justify-center mb-16">
+          <Image
+            src="/images/ai-award-badge.png"
+            alt="The Future of AI 2025 Top 50"
+            width={400}
+            height={100}
+            className=""
+          />
+        </div>
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">How Gambit Works</h2>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
           Saving money when you shop online is as easy as 1, 2, 3.
