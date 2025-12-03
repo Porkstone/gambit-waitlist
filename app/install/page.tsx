@@ -92,14 +92,14 @@ export default function InstallPage() {
         </div>
 
         {/* Right Device Mockup */}
-        <div className="flex-1 flex justify-center lg:justify-end w-full max-w-[600px]">
+        <div className="flex-1 flex justify-center lg:justify-end w-full max-w-[1200px]">
           <DeviceMockup />
         </div>
       </main>
 
       {/* How It Works Section */}
       <section className="relative z-10 max-w-[1400px] mx-auto w-full px-6 lg:px-8 pt-8 lg:pt-12 pb-16 lg:pb-24 text-center">
-        <div className="flex justify-center mb-16">
+        <div className="flex justify-center mb-24">
           <Image
             src="/images/ai-award-badge.png"
             alt="The Future of AI 2025 Top 50"
@@ -135,8 +135,8 @@ export default function InstallPage() {
 function DeviceMockup() {
   return (
     <div className="relative w-full">
-      <div className="relative bg-gray-900 rounded-[2.5rem] p-3 shadow-2xl ring-1 ring-gray-900/5">
-        <div className="bg-white rounded-[2rem] overflow-hidden h-full min-h-[400px] lg:min-h-[450px]">
+        <div className="relative bg-gray-900 rounded-[2.5rem] p-3 shadow-2xl ring-1 ring-gray-900/5">
+        <div className="bg-white rounded-[2rem] overflow-hidden h-full min-h-[350px] lg:min-h-[400px] aspect-[16/9]">
           {/* Browser Bar */}
           <div className="bg-gray-50 px-6 py-3 flex items-center gap-4 border-b border-gray-100">
             <div className="flex gap-2">
@@ -162,91 +162,16 @@ function DeviceMockup() {
           </div>
 
           {/* Product Page Content */}
-          <div className="p-8 lg:p-10 flex flex-col lg:flex-row gap-8 h-full">
-            {/* Image Side */}
-            <div className="flex-1">
-              <div className="aspect-square relative">
-                {/* Sneaker Layout - CSS Drawing */}
-                <div className="w-full h-full relative">
-                  {/* Abstract Sneaker Shape */}
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%]">
-                    <Image 
-                      src="/images/hero-woman-city.png" 
-                      alt="Sneakers"
-                      width={400}
-                      height={400}
-                      className="w-full h-auto object-contain opacity-0" 
-                    />
-                    {/* Since we don't have the sneaker image, I'll build a placeholder that looks good */}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                       <div className="relative w-full max-w-[280px] aspect-[4/3]">
-                          {/* Shoe Back */}
-                          <div className="absolute bottom-4 right-0 w-24 h-24 bg-gray-100 rounded-full transform translate-x-4"></div>
-                          {/* Shoe Body */}
-                          <div className="absolute bottom-4 left-0 right-8 h-32 bg-gray-50 rounded-[2rem] transform -skew-x-12"></div>
-                          {/* Shoe Sole */}
-                          <div className="absolute bottom-0 left-0 right-0 h-8 bg-white border-t-4 border-orange-400/20 rounded-full shadow-sm"></div>
-                          <div className="absolute inset-0 flex items-center justify-center text-gray-300 font-medium text-sm uppercase tracking-widest">
-                            Product Image
-                          </div>
-                       </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Info Side */}
-            <div className="flex-1 space-y-6 pt-4">
-              <div className="space-y-2">
-                <h3 className="text-2xl font-bold text-gray-900">Sneakers</h3>
-                <div className="flex gap-1">
-                  {[1,2,3,4,5].map(i => (
-                    <div key={i} className="w-4 h-4 text-yellow-400 fill-current">★</div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="space-y-3">
-                <div className="h-3 bg-gray-100 rounded w-full"></div>
-                <div className="h-3 bg-gray-100 rounded w-5/6"></div>
-                <div className="h-3 bg-gray-100 rounded w-4/6"></div>
-              </div>
-
-              {/* Color Swatches */}
-              <div className="flex gap-3 pt-2">
-                <div className="w-8 h-8 rounded bg-[#FF6B00] border-2 border-white ring-1 ring-gray-200 shadow-sm cursor-pointer"></div>
-                <div className="w-8 h-8 rounded bg-gray-800 border-2 border-white ring-1 ring-gray-200 shadow-sm cursor-pointer"></div>
-                <div className="w-8 h-8 rounded bg-[#28C840] border-2 border-white ring-1 ring-gray-200 shadow-sm cursor-pointer"></div>
-              </div>
-
-              {/* Controls */}
-              <div className="flex items-center gap-4 pt-2">
-                <div className="flex items-center bg-gray-100 rounded-lg px-2 py-1">
-                  <button className="w-8 h-8 flex items-center justify-center text-gray-500 font-medium hover:bg-white rounded-md transition-colors">-</button>
-                  <span className="w-8 text-center font-medium text-gray-900">1</span>
-                  <button className="w-8 h-8 flex items-center justify-center text-gray-500 font-medium hover:bg-white rounded-md transition-colors">+</button>
-                </div>
-              </div>
-
-              {/* Add Button */}
-              <button className="w-full bg-gray-900 text-white py-3.5 rounded-xl font-medium hover:bg-gray-800 transition-colors shadow-lg shadow-gray-900/10">
-                Add to Bag
-              </button>
-            </div>
-          </div>
-
-          {/* Floating Cart Extension UI */}
-          <div className="absolute bottom-8 left-8 z-20 animate-bounce-subtle">
-            <div className="relative group cursor-pointer">
-              <div className="w-16 h-16 bg-[#FF6B00] rounded-full flex items-center justify-center shadow-[0_8px_30px_rgba(255,107,0,0.3)] transition-transform hover:scale-105 hover:rotate-3">
-                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-              <div className="absolute -top-1 -right-1 w-6 h-6 bg-red-500 rounded-full border-[3px] border-white text-white text-[10px] font-bold flex items-center justify-center">
-                1
-              </div>
+          <div className="p-4 lg:p-6 h-full">
+            <div className="w-full h-full relative rounded-lg overflow-hidden bg-black">
+              <video
+                src="/images/u.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
