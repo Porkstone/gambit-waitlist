@@ -3,6 +3,7 @@
 import { GambitLogo } from "@/components/gambit-logo"
 import Image from "next/image"
 import Link from "next/link"
+import { useEffect, useRef, useState, type ReactNode } from "react"
 
 export default function InstallPage() {
   return (
@@ -109,9 +110,48 @@ export default function InstallPage() {
           />
         </div>
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">How Gambit Works</h2>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-16">
           Saving money when you shop online is as easy as 1, 2, 3.
         </p>
+
+        {/* Steps */}
+        <div className="max-w-6xl mx-auto flex flex-col gap-0 text-left">
+          {/* Step 1 */}
+          <StepCard
+            number="01"
+            title="Alerts you to potential savings"
+            description="Shop just like normal. Gambit notifies you about any vouchers that could save you money."
+            icon={
+              <svg className="w-8 h-8 lg:w-10 lg:h-10 text-[#FF6B00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+              </svg>
+            }
+          />
+
+          {/* Step 2 */}
+          <StepCard
+            number="02"
+            title="Automatically applies codes"
+            description="With one click, Gambit finds and applies the best voucher codes to your cart automatically."
+            icon={
+              <svg className="w-8 h-8 lg:w-10 lg:h-10 text-[#FF6B00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            }
+          />
+
+          {/* Step 3 */}
+          <StepCard
+            number="03"
+            title="Save money instantly"
+            description="See your savings applied at checkout. No copying codes or searching for deals needed."
+            icon={
+              <svg className="w-8 h-8 lg:w-10 lg:h-10 text-[#FF6B00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            }
+          />
+        </div>
       </section>
 
       {/* Footer */}
@@ -128,6 +168,58 @@ export default function InstallPage() {
           .
         </p>
       </footer>
+    </div>
+  )
+}
+
+function StepCard({ number, title, description, icon }: { number: string; title: string; description: string; icon: ReactNode }) {
+  const [isVisible, setIsVisible] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+        }
+      },
+      { threshold: 0.1 }
+    )
+
+    if (ref.current) {
+      observer.observe(ref.current)
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current)
+      }
+    }
+  }, [])
+
+  return (
+    <div
+      ref={ref}
+      className={`min-h-screen flex items-center justify-center px-6 lg:px-8 transition-all duration-700 ${
+        isVisible
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-8"
+      }`}
+    >
+      <div className="max-w-4xl w-full space-y-8">
+        <div className="flex items-center gap-6">
+          <div className={`text-7xl lg:text-8xl font-bold text-[#FF6B00] transition-all duration-700 ${
+            isVisible ? "scale-100" : "scale-0"
+          }`}>
+            {number}
+          </div>
+          <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-full bg-[#FF6B00]/10 flex items-center justify-center">
+            {icon}
+          </div>
+        </div>
+        <h3 className="text-3xl lg:text-4xl font-bold text-gray-900">{title}</h3>
+        <p className="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-2xl">{description}</p>
+      </div>
     </div>
   )
 }

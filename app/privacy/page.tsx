@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function PrivacyPage() {
   return (
-    <div className="h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col">
       <header className="bg-white py-5 lg:py-7 px-4 lg:px-12 relative z-20 shadow-sm min-h-16 lg:min-h-24">
         <div className="flex items-center justify-between lg:justify-start">
           <Link href="/" aria-label="Go to home">
@@ -34,16 +34,16 @@ export default function PrivacyPage() {
         </div>
       </header>
 
-      <div className="flex-1 gradient-bg relative overflow-hidden flex flex-col">
+      <div className="flex-1 gradient-bg relative flex flex-col">
         <ParticleBackground />
 
-        <main className="relative z-10 grid lg:grid-cols-2 flex-1">
-          <div className="flex flex-col justify-center px-6 lg:px-12 relative">
-            <div className="space-y-6 max-w-lg">
-              <h1 className="text-2xl font-bold tracking-tight text-white">Privacy Policy</h1>
-              <p className="text-sm text-white/70">Last updated: October 2025</p>
+        <main className="relative z-10 grid lg:grid-cols-2 min-h-0">
+          <div className="flex flex-col justify-center px-6 lg:px-12 py-8 lg:py-12 relative overflow-y-auto">
+            <div className="space-y-4 max-w-lg">
+              <h1 className="text-xl font-bold tracking-tight text-white">Privacy Policy</h1>
+              <p className="text-xs text-white/70">Last updated: October 2025</p>
 
-              <div className="space-y-6 text-sm leading-6 text-white/90">
+              <div className="space-y-4 text-xs leading-5 text-white/90">
                 <p>
                   Your privacy matters to us. This Privacy Policy explains what information we
                   collect, how we use it, and your choices. By using Gambit, you agree to the
@@ -51,8 +51,8 @@ export default function PrivacyPage() {
                 </p>
 
                 <section>
-                  <h2 className="text-lg font-semibold text-white">Information We Collect</h2>
-                  <ul className="mt-2 list-disc pl-5 space-y-1">
+                  <h2 className="text-sm font-semibold text-white">Information We Collect</h2>
+                  <ul className="mt-1.5 list-disc pl-5 space-y-1">
                     <li>
                       Contact information: such as your email address when you join the waitlist.
                     </li>
@@ -64,8 +64,8 @@ export default function PrivacyPage() {
                 </section>
 
                 <section>
-                  <h2 className="text-lg font-semibold text-white">How We Use Your Information</h2>
-                  <ul className="mt-2 list-disc pl-5 space-y-1">
+                  <h2 className="text-sm font-semibold text-white">How We Use Your Information</h2>
+                  <ul className="mt-1.5 list-disc pl-5 space-y-1">
                     <li>To provide and improve our services and user experience.</li>
                     <li>To communicate updates, announcements, and relevant marketing.</li>
                     <li>To maintain the security and reliability of our platform.</li>
@@ -73,8 +73,8 @@ export default function PrivacyPage() {
                 </section>
 
                 <section>
-                  <h2 className="text-lg font-semibold text-white">Data Retention</h2>
-                  <p className="mt-2">
+                  <h2 className="text-sm font-semibold text-white">Data Retention</h2>
+                  <p className="mt-1.5">
                     We retain personal information only for as long as necessary to fulfill the
                     purposes outlined in this policy or as required by law. You can request
                     deletion of your information at any time.
@@ -82,16 +82,16 @@ export default function PrivacyPage() {
                 </section>
 
                 <section>
-                  <h2 className="text-lg font-semibold text-white">Your Choices</h2>
-                  <ul className="mt-2 list-disc pl-5 space-y-1">
+                  <h2 className="text-sm font-semibold text-white">Your Choices</h2>
+                  <ul className="mt-1.5 list-disc pl-5 space-y-1">
                     <li>Opt-out of marketing emails using the unsubscribe link in our emails.</li>
                     <li>Request access, correction, or deletion of your data by contacting us.</li>
                   </ul>
                 </section>
 
                 <section>
-                  <h2 className="text-lg font-semibold text-white">Contact Us</h2>
-                  <p className="mt-2">
+                  <h2 className="text-sm font-semibold text-white">Contact Us</h2>
+                  <p className="mt-1.5">
                     If you have questions about this Privacy Policy or our data practices,
                     contact us at <span className="font-medium">privacy@gambit.app</span>.
                   </p>
@@ -100,7 +100,7 @@ export default function PrivacyPage() {
             </div>
           </div>
 
-          <div className="relative h-full">
+          <div className="relative min-h-[400px] lg:h-full hidden lg:block">
             <Image
               src="/images/hero-woman-city.png"
               alt="Woman in city with golden particles"
