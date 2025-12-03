@@ -1,35 +1,40 @@
 "use client"
 
 import { GambitLogo } from "@/components/gambit-logo"
-import { ParticleBackground } from "@/components/particle-background"
 import Image from "next/image"
 import Link from "next/link"
 
 export default function InstallPage() {
   return (
-    <div className="min-h-screen flex flex-col gradient-bg overflow-hidden relative text-white selection:bg-yellow-400 selection:text-purple-900">
-      <ParticleBackground />
-      
+    <div className="min-h-screen flex flex-col bg-white text-gray-900 selection:bg-yellow-100 selection:text-purple-900 font-sans">
       {/* Header */}
-      <header className="relative z-20 w-full bg-white/10 backdrop-blur-md border-b border-white/10">
-        <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
-          <GambitLogo className="text-white" />
-          
-          <div className="hidden lg:flex items-center gap-6">
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Start Searching..."
-                className="bg-white/10 border border-white/20 rounded-full px-4 py-2 pl-10 text-sm text-white placeholder:text-white/60 w-64 focus:outline-none focus:border-white/40 transition-colors"
-              />
-              <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
+      <header className="relative z-20 w-full bg-white border-b border-gray-100">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-8 py-4 flex items-center justify-between gap-8">
+          <div className="flex items-center gap-12 flex-1">
+            <GambitLogo className="text-gray-900" />
+            
+            <div className="hidden lg:block max-w-xl w-full relative">
+              <div className="relative group">
+                <input
+                  type="text"
+                  placeholder="Start Searching..."
+                  className="w-full bg-gray-50 border border-transparent hover:bg-gray-100 focus:bg-white focus:border-gray-200 rounded-lg px-4 py-2.5 pl-11 text-sm text-gray-900 placeholder:text-gray-500 outline-none transition-all duration-200"
+                />
+                <svg className="absolute left-3.5 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 group-hover:text-gray-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
             </div>
-            <button className="text-sm text-white/80 hover:text-white transition-colors">Categories ▼</button>
-            <button className="flex items-center gap-2 text-sm text-white/80 hover:text-white transition-colors">
-              <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          </div>
+          
+          <div className="hidden lg:flex items-center gap-8 shrink-0">
+            <button className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-1">
+              Categories 
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <button className="flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors group">
+              <div className="w-8 h-8 rounded-full bg-gray-100 group-hover:bg-gray-200 text-gray-500 group-hover:text-gray-700 flex items-center justify-center transition-colors">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
               </div>
@@ -40,14 +45,14 @@ export default function InstallPage() {
       </header>
 
       {/* Main Hero Section */}
-      <main className="relative z-10 flex-1 flex flex-col lg:flex-row items-center max-w-[1600px] mx-auto w-full px-6 lg:px-12 py-12 lg:py-20 gap-12 lg:gap-16">
+      <main className="relative z-10 flex-1 flex flex-col lg:flex-row items-center max-w-[1400px] mx-auto w-full px-6 lg:px-8 py-12 lg:py-20 gap-12 lg:gap-24">
         {/* Left Content */}
         <div className="flex-1 space-y-8 max-w-2xl">
           <div className="space-y-6">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-balance leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold text-gray-900 leading-[1.1] tracking-tight text-balance">
               Gambit automatically finds and applies the best voucher codes at checkout
             </h1>
-            <p className="text-lg sm:text-xl text-purple-100/80 leading-relaxed">
+            <p className="text-lg text-gray-600 leading-relaxed max-w-xl">
               We search for the best voucher codes on the Internet and automatically apply them to your bag. Save on all your purchases with just one click!
             </p>
           </div>
@@ -55,27 +60,31 @@ export default function InstallPage() {
           <div className="space-y-6">
             <a
               href="#"
-              className="inline-flex items-center gap-4 bg-yellow-400 hover:bg-yellow-300 text-purple-900 px-8 py-4 rounded-lg font-bold text-lg transition-colors shadow-lg hover:shadow-xl"
+              className="inline-flex items-center gap-4 bg-[#FF6B00] hover:bg-[#E65D00] text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
             >
-              {/* Chrome Logo - Simplified */}
-              <svg className="w-6 h-6" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 0C8.21 0 4.831 1.757 2.632 4.501l3.953 6.848A5.454 5.454 0 0112 6.545h10.691A12 12 0 0012 0z" fill="#EA4335"/>
-                <path d="M21.382 14.033a6.679 6.679 0 01.307 2.214A11.985 11.985 0 0112 24c-4.546 0-8.744-2.507-10.883-6.549l8.14-14.103a5.46 5.46 0 018.08 7.497l3.044-5.269 6.604 11.458h-6.603z" fill="#34A853"/>
-                <path d="M3.069 7.765c-.16.294-.314.59-.456.893L12 12l5.091-8.816A5.46 5.46 0 0112 6.545a5.46 5.46 0 01-8.931-1.22z" fill="#FBBC04"/>
-                <circle cx="12" cy="12" r="3" fill="#4285F4"/>
-              </svg>
+              {/* Chrome Logo */}
+              <div className="bg-white rounded-full p-1">
+                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 0C8.21 0 4.831 1.757 2.632 4.501l3.953 6.848A5.454 5.454 0 0112 6.545h10.691A12 12 0 0012 0z" fill="#EA4335"/>
+                  <path d="M21.382 14.033a6.679 6.679 0 01.307 2.214A11.985 11.985 0 0112 24c-4.546 0-8.744-2.507-10.883-6.549l8.140-14.103a5.46 5.46 0 018.08 7.497l3.044-5.269 6.604 11.458h-6.603z" fill="#34A853"/>
+                  <path d="M3.069 7.765c-.16.294-.314.59-.456.893L12 12l5.091-8.816A5.46 5.46 0 0112 6.545a5.46 5.46 0 01-8.931-1.22z" fill="#FBBC04"/>
+                  <path d="M12 0C8.21 0 4.831 1.757 2.632 4.501l3.953 6.848A5.454 5.454 0 0112 6.545h10.691A12 12 0 0012 0z" fill="#4285F4"/>
+                  <circle cx="12" cy="12" r="4.5" fill="white"/>
+                  <circle cx="12" cy="12" r="3.5" fill="#4285F4"/>
+                </svg>
+              </div>
               <span>Add to Chrome - It's Free</span>
             </a>
 
             <div className="flex items-center gap-3">
               <div className="flex gap-1">
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
-                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                  <svg key={i} className="w-5 h-5 text-[#FFB800] fill-current" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
                 ))}
               </div>
-              <span className="text-sm text-white/80">
+              <span className="text-sm font-medium text-gray-600">
                 4.9 out of 5 based on 200,000+ users
               </span>
             </div>
@@ -83,28 +92,28 @@ export default function InstallPage() {
         </div>
 
         {/* Right Device Mockup */}
-        <div className="flex-1 flex justify-center lg:justify-end max-w-2xl">
+        <div className="flex-1 flex justify-center lg:justify-end w-full max-w-[600px]">
           <DeviceMockup />
         </div>
       </main>
 
       {/* How It Works Section */}
-      <section className="relative z-10 max-w-[1600px] mx-auto w-full px-6 lg:px-12 py-16 lg:py-24 text-center">
-        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">How Gambit Works</h2>
-        <p className="text-lg sm:text-xl text-purple-100/80 max-w-2xl mx-auto">
+      <section className="relative z-10 max-w-[1400px] mx-auto w-full px-6 lg:px-8 py-16 lg:py-24 text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">How Gambit Works</h2>
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
           Saving money when you shop online is as easy as 1, 2, 3.
         </p>
       </section>
 
       {/* Footer */}
-      <footer className="relative z-10 py-6 px-6 text-center border-t border-white/10">
-        <p className="text-white/40 text-xs">
+      <footer className="relative z-10 py-8 px-6 text-center border-t border-gray-100 bg-gray-50">
+        <p className="text-gray-500 text-sm">
           By using Gambit Technologies Ltd, you agree to our{" "}
-          <Link href="/terms" className="text-white/60 hover:text-white transition-colors underline decoration-white/30 underline-offset-4">
+          <Link href="/terms" className="text-gray-700 hover:text-gray-900 underline underline-offset-4 transition-colors">
             Terms
           </Link>{" "}
           and have read our{" "}
-          <Link href="/privacy" className="text-white/60 hover:text-white transition-colors underline decoration-white/30 underline-offset-4">
+          <Link href="/privacy" className="text-gray-700 hover:text-gray-900 underline underline-offset-4 transition-colors">
             Privacy Policy
           </Link>
           .
@@ -116,72 +125,119 @@ export default function InstallPage() {
 
 function DeviceMockup() {
   return (
-    <div className="relative w-full max-w-md">
-      <div className="relative bg-gray-900 rounded-[2rem] p-2 shadow-2xl transform -rotate-3 lg:rotate-0">
-        <div className="bg-white rounded-[1.5rem] overflow-hidden">
+    <div className="relative w-full">
+      <div className="relative bg-gray-900 rounded-[2.5rem] p-3 shadow-2xl ring-1 ring-gray-900/5">
+        <div className="bg-white rounded-[2rem] overflow-hidden h-full min-h-[400px] lg:min-h-[450px]">
           {/* Browser Bar */}
-          <div className="bg-gray-100 px-4 py-2 flex items-center gap-3 border-b border-gray-200">
+          <div className="bg-gray-50 px-6 py-3 flex items-center gap-4 border-b border-gray-100">
             <div className="flex gap-2">
-              <div className="w-3 h-3 rounded-full bg-red-400"></div>
-              <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-              <div className="w-3 h-3 rounded-full bg-green-400"></div>
+              <div className="w-3 h-3 rounded-full bg-[#FF5F57]"></div>
+              <div className="w-3 h-3 rounded-full bg-[#FEBC2E]"></div>
+              <div className="w-3 h-3 rounded-full bg-[#28C840]"></div>
             </div>
-            <div className="flex-1 bg-white rounded-lg px-3 py-1 text-xs text-gray-500">
-              shopping.example.com
+            <div className="flex-1 bg-white rounded-md px-4 py-1.5 text-xs text-gray-400 shadow-sm border border-gray-100 flex items-center justify-between">
+              <span>shopping.example.com</span>
+              <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>
             </div>
-            <div className="relative">
-              <div className="w-8 h-8 bg-green-500 rounded flex items-center justify-center">
-                <span className="text-white font-bold text-xs">G</span>
+            <div className="relative flex items-center gap-3">
+              <div className="w-px h-4 bg-gray-200"></div>
+              <div className="relative">
+                <div className="w-7 h-7 bg-indigo-600 rounded flex items-center justify-center shadow-sm">
+                  <span className="text-white font-bold text-xs">G</span>
+                </div>
+                <div className="absolute -top-1.5 -right-1.5 w-4 h-4 bg-[#FF6B00] rounded-full border-2 border-white text-[10px] font-bold text-white flex items-center justify-center">
+                  8
+                </div>
               </div>
-              <div className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full border-2 border-white"></div>
             </div>
           </div>
 
-          {/* Product Page */}
-          <div className="p-6 space-y-6">
-            {/* Product Image */}
-            <div className="aspect-square bg-gray-100 rounded-lg flex items-center justify-center">
-              <div className="text-gray-300 text-sm">Sneakers Image</div>
+          {/* Product Page Content */}
+          <div className="p-8 lg:p-10 flex flex-col lg:flex-row gap-8 h-full">
+            {/* Image Side */}
+            <div className="flex-1">
+              <div className="aspect-square relative">
+                {/* Sneaker Layout - CSS Drawing */}
+                <div className="w-full h-full relative">
+                  {/* Abstract Sneaker Shape */}
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%]">
+                    <Image 
+                      src="/images/hero-woman-city.png" 
+                      alt="Sneakers"
+                      width={400}
+                      height={400}
+                      className="w-full h-auto object-contain opacity-0" 
+                    />
+                    {/* Since we don't have the sneaker image, I'll build a placeholder that looks good */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                       <div className="relative w-full max-w-[280px] aspect-[4/3]">
+                          {/* Shoe Back */}
+                          <div className="absolute bottom-4 right-0 w-24 h-24 bg-gray-100 rounded-full transform translate-x-4"></div>
+                          {/* Shoe Body */}
+                          <div className="absolute bottom-4 left-0 right-8 h-32 bg-gray-50 rounded-[2rem] transform -skew-x-12"></div>
+                          {/* Shoe Sole */}
+                          <div className="absolute bottom-0 left-0 right-0 h-8 bg-white border-t-4 border-orange-400/20 rounded-full shadow-sm"></div>
+                          <div className="absolute inset-0 flex items-center justify-center text-gray-300 font-medium text-sm uppercase tracking-widest">
+                            Product Image
+                          </div>
+                       </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            {/* Product Info */}
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold text-gray-900">Sneakers</h3>
+            {/* Info Side */}
+            <div className="flex-1 space-y-6 pt-4">
               <div className="space-y-2">
-                <div className="h-4 bg-gray-200 rounded w-3/4"></div>
-                <div className="h-4 bg-gray-200 rounded w-1/2"></div>
+                <h3 className="text-2xl font-bold text-gray-900">Sneakers</h3>
+                <div className="flex gap-1">
+                  {[1,2,3,4,5].map(i => (
+                    <div key={i} className="w-4 h-4 text-yellow-400 fill-current">★</div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="space-y-3">
+                <div className="h-3 bg-gray-100 rounded w-full"></div>
+                <div className="h-3 bg-gray-100 rounded w-5/6"></div>
+                <div className="h-3 bg-gray-100 rounded w-4/6"></div>
               </div>
 
               {/* Color Swatches */}
-              <div className="flex gap-3">
-                <div className="w-10 h-10 rounded-full bg-orange-400 border-2 border-gray-300"></div>
-                <div className="w-10 h-10 rounded-full bg-gray-900 border-2 border-gray-300"></div>
-                <div className="w-10 h-10 rounded-full bg-green-500 border-2 border-gray-300"></div>
+              <div className="flex gap-3 pt-2">
+                <div className="w-8 h-8 rounded bg-[#FF6B00] border-2 border-white ring-1 ring-gray-200 shadow-sm cursor-pointer"></div>
+                <div className="w-8 h-8 rounded bg-gray-800 border-2 border-white ring-1 ring-gray-200 shadow-sm cursor-pointer"></div>
+                <div className="w-8 h-8 rounded bg-[#28C840] border-2 border-white ring-1 ring-gray-200 shadow-sm cursor-pointer"></div>
               </div>
 
-              {/* Quantity Selector */}
-              <div className="flex items-center gap-4">
-                <button className="w-8 h-8 rounded border border-gray-300 flex items-center justify-center text-gray-600">-</button>
-                <span className="text-gray-900 font-medium">1</span>
-                <button className="w-8 h-8 rounded border border-gray-300 flex items-center justify-center text-gray-600">+</button>
+              {/* Controls */}
+              <div className="flex items-center gap-4 pt-2">
+                <div className="flex items-center bg-gray-100 rounded-lg px-2 py-1">
+                  <button className="w-8 h-8 flex items-center justify-center text-gray-500 font-medium hover:bg-white rounded-md transition-colors">-</button>
+                  <span className="w-8 text-center font-medium text-gray-900">1</span>
+                  <button className="w-8 h-8 flex items-center justify-center text-gray-500 font-medium hover:bg-white rounded-md transition-colors">+</button>
+                </div>
               </div>
 
-              {/* Add to Bag Button */}
-              <button className="w-full bg-gray-900 text-white py-3 rounded-lg font-medium">
+              {/* Add Button */}
+              <button className="w-full bg-gray-900 text-white py-3.5 rounded-xl font-medium hover:bg-gray-800 transition-colors shadow-lg shadow-gray-900/10">
                 Add to Bag
               </button>
             </div>
           </div>
 
-          {/* Shopping Cart Icon */}
-          <div className="absolute bottom-6 left-6">
-            <div className="relative">
-              <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center shadow-lg">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          {/* Floating Cart Extension UI */}
+          <div className="absolute bottom-8 left-8 z-20 animate-bounce-subtle">
+            <div className="relative group cursor-pointer">
+              <div className="w-16 h-16 bg-[#FF6B00] rounded-full flex items-center justify-center shadow-[0_8px_30px_rgba(255,107,0,0.3)] transition-transform hover:scale-105 hover:rotate-3">
+                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <div className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full border-2 border-white"></div>
+              <div className="absolute -top-1 -right-1 w-6 h-6 bg-red-500 rounded-full border-[3px] border-white text-white text-[10px] font-bold flex items-center justify-center">
+                1
+              </div>
             </div>
           </div>
         </div>
