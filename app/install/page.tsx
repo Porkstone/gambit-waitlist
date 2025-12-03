@@ -162,8 +162,8 @@ function DeviceMockup() {
           </div>
 
           {/* Product Page Content */}
-          <div className="p-4 lg:p-6 h-full">
-            <div className="w-full h-full relative rounded-lg overflow-hidden bg-black">
+          <div className="h-full">
+            <div className="w-full h-full relative overflow-hidden bg-black">
               <video
                 src="/images/u.mp4"
                 autoPlay
