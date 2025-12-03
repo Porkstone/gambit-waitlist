@@ -59,7 +59,7 @@ export default function InstallPage() {
 
           <div className="space-y-6">
             <a
-              href="#"
+              href="https://chromewebstore.google.com/detail/gambit/hejkfeegfmfjnnbdjanjkibllehoaphk"
               className="inline-flex items-center gap-4 bg-[#FF6B00] hover:bg-[#E65D00] text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
             >
               {/* Chrome Logo */}
