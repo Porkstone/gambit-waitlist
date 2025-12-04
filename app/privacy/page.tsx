@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function PrivacyPage() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="h-screen flex flex-col">
       <header className="bg-white py-5 lg:py-7 px-4 lg:px-12 relative z-20 shadow-sm min-h-16 lg:min-h-24">
         <div className="flex items-center justify-between lg:justify-start">
           <Link href="/" aria-label="Go to home">
@@ -70,6 +70,17 @@ export default function PrivacyPage() {
                     <li>To communicate updates, announcements, and relevant marketing.</li>
                     <li>To maintain the security and reliability of our platform.</li>
                   </ul>
+                </section>
+
+                <section>
+                  <h2 className="text-sm font-semibold text-white">Google Data Usage</h2>
+                  <p className="mt-1.5">
+                    We use Google services, including Google Analytics and other Google products, to help us understand how visitors interact with our website and improve our services. Google may collect and process data about your use of our website in accordance with Google's Privacy Policy. This data may include information such as your IP address, browser type, device information, and pages visited. You can learn more about how Google uses data when you visit our website by visiting{" "}
+                    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">
+                      Google's Privacy Policy
+                    </a>
+                    .
+                  </p>
                 </section>
 
                 <section>
