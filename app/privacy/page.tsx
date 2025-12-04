@@ -1,5 +1,6 @@
 import { GambitLogo } from "@/components/gambit-logo"
 import { ParticleBackground } from "@/components/particle-background"
+import { BackButton } from "@/components/back-button"
 import Image from "next/image"
 import Link from "next/link"
 export const metadata = {
@@ -12,9 +13,12 @@ export default function PrivacyPage() {
     <div className="h-screen flex flex-col">
       <header className="bg-white py-5 lg:py-7 px-4 lg:px-12 relative z-20 shadow-sm min-h-16 lg:min-h-24">
         <div className="flex items-center justify-between lg:justify-start">
-          <Link href="/" aria-label="Go to home">
-            <GambitLogo />
-          </Link>
+          <div className="flex items-center gap-4">
+            <BackButton />
+            <Link href="/" aria-label="Go to home">
+              <GambitLogo />
+            </Link>
+          </div>
           <Image
             src="/images/ai-award-badge.png"
             alt="The Future of AI 2025 Top 50"
