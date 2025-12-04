@@ -12,7 +12,9 @@ export default function InstallPage() {
       <header className="relative z-20 w-full bg-white border-b border-gray-100">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-8 py-4 flex items-center justify-between gap-8">
           <div className="flex items-center gap-12 flex-1">
-            <GambitLogo className="text-gray-900" />
+            <Link href="/" aria-label="Go to home">
+              <GambitLogo className="text-gray-900" />
+            </Link>
             
             <div className="hidden lg:block max-w-xl w-full relative">
               <div className="relative group">
